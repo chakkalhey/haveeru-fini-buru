@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<title>SCOOTER RUSH</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="game-container"></div>
+
+<div id="ui">
+
+  <div id="hud" class="hidden">
+    <div id="score-box">
+      <span class="label">SCORE</span>
+      <span id="score-value">0</span>
+    </div>
+    <div id="mb-box">
+      <span id="mb-icon">DATA</span>
+      <span id="mb-value">0</span><span class="unit">MB</span>
+    </div>
+    <div id="boost-wrap" class="hidden">
+      <div id="boost-label">DATA BOOST x2</div>
+      <div id="boost-track"><div id="boost-fill"></div></div>
+    </div>
+  </div>
+
+  <div id="start-screen" class="screen">
+    <h1 class="title">SCOOTER<span>RUSH</span></h1>
+    <p class="subtitle">Ride. Dodge. Download.</p>
+    <div class="instructions">
+      <div class="instr-row"><span class="key">&#8592; &#8594;</span> Switch lanes</div>
+      <div class="instr-row"><span class="key">&#8593;</span> Jump</div>
+      <div class="instr-row"><span class="key">&#8595;</span> Slide</div>
+      <div class="instr-row small">Swipe on mobile</div>
+    </div>
+    <button id="start-btn" class="btn">TAP TO START</button>
+    <p class="hint">or press SPACE</p>
+  </div>
+
+  <div id="gameover-screen" class="screen hidden">
+    <h1 class="title crash">WIPEOUT</h1>
+    <div class="stats">
+      <p>Score <span id="final-score">0</span></p>
+      <p>Data Collected <span id="final-mb">0</span> MB</p>
+      <p class="best">Best Score <span id="best-score">0</span></p>
+    </div>
+    <button id="restart-btn" class="btn">RETRY</button>
+  </div>
+
+  <div id="touch-controls" class="hidden">
+    <button id="btn-left" class="ctrl-btn" aria-label="left">&#8592;</button>
+    <div class="ctrl-mid">
+      <button id="btn-jump" class="ctrl-btn" aria-label="jump">&#8593;</button>
+      <button id="btn-slide" class="ctrl-btn" aria-label="slide">&#8595;</button>
+    </div>
+    <button id="btn-right" class="ctrl-btn" aria-label="right">&#8594;</button>
+  </div>
+
+</div>
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+  }
+}
+</script>
+<script type="module" src="game.js"></script>
+</body>
+</html>
